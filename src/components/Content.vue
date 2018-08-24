@@ -1,5 +1,5 @@
 <template>
-    <div style="margin: auto; margin-top: 32vh">
+    <div style="margin: auto; margin-top: 28vh">
         <div>
             <router-link to="/home">
                 <button class="buttonCSS">Start new questionare</button>
@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .marginTop{
-    margin-top: 5vh
+    margin-top: 7vh
 }
 
 .buttonCSS{
@@ -27,5 +27,6 @@ export default {
     border-radius: 10px;
     width: 30vw;
     height: 10vh;
+    font-size: 4vh;
 }
 </style>

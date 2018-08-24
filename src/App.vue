@@ -16,12 +16,12 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Titan One', cursive;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
+  background-color: #00CC99;
  
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <h1>Firestore</h1> 
-  <h3 v-for="question in surveys" v-bind:key="question">
+  <h3 v-for="question in surveys" v-bind:key="question.docid">
   {{ question.qid }} {{ question.qname }} {{ question.type }}    
   </h3> 
 </div>

@@ -5,12 +5,14 @@ import HelloWorld from './components/HelloWorld.vue'
 import MyComponent from './components/MyComponent.vue'
 import Krong from './components/Krong.vue'
 import Content from './components/Content'
+import Firestore from './components/Firestore'
 
 Vue.use(Router)
 
 const routes = [
     //{ path: '/', component: HelloWorld },
     { path: '/home', component: HelloWorld },
+    { path: '/firebase', component: Firestore },
     { path: '/admin', component: MyComponent },
     { path: '/admin/:username', component: MyComponent },
     { path: '/',

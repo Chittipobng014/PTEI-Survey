@@ -2,11 +2,14 @@
     <div style="margin: auto; margin-top: 28vh">
         <div>
             <router-link to="/home">
-                <button class="buttonCSS">Start new questionare</button>
+                <b-button class="buttonCSS">Start new questionare</b-button>
             </router-link>            
         </div>
         <div class="marginTop">
-            <button class="buttonCSS">Manage Responses</button>
+            
+            <router-link to="/login">
+            <b-button class="buttonCSS">Manage Responses</b-button>
+            </router-link>   
         </div>
     </div>
 </template>
@@ -23,10 +26,10 @@ export default {
 }
 
 .buttonCSS{
-    background-color: aqua;
+    background-color: rgb(6, 139, 106);
     border-radius: 10px;
     width: 30vw;
     height: 10vh;
-    font-size: 4vh;
+    font-size: 3.5vh;
 }
 </style>

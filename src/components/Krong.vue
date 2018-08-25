@@ -1,7 +1,7 @@
 <template>
     <div class="fullscreen">
         <div style="width: 100vw;   height: 10vh;   background-color: rgb(13, 172, 132)">
-
+            
       </div>
       <router-view></router-view>
     </div>
@@ -20,6 +20,6 @@ export default {
 }
 
 .bgcolor{
-    background-color: #00CC99
+    background-color: #00CC99;
 } 
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <div style="margin: auto; margin-top: 28vh">
+    <div class="container" style="margin: auto; margin-top: 28vh">
         <div>
-            <router-link to="/home">
+            <router-link to="/start">
                 <b-button class="buttonCSS">Start new questionare</b-button>
             </router-link>            
         </div>
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style scoped>
+.container{
+      text-align: center;
+}
 .marginTop{
     margin-top: 7vh
 }
@@ -28,7 +31,7 @@ export default {
 .buttonCSS{
     background-color: rgb(6, 139, 106);
     border-radius: 10px;
-    width: 30vw;
+    width: 35vw;
     height: 10vh;
     font-size: 3.5vh;
 }

@@ -18,7 +18,8 @@ const routes = [
     { path: '/',
       component: Krong,
       children:[
-        { path: 'new', component: Content}
+        { path: 'new', component: Content},
+        { path: 'start', component: Firestore}
       ]
     }
   ]

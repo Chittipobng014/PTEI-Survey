@@ -19,7 +19,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 #app {
   font-family: 'Titan One', cursive;
-  text-align: center;
   color: #000000;
   background-color: #00CC99;
  

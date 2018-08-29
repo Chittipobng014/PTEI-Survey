@@ -7,6 +7,8 @@ import Content from './components/Content'
 import Firestore from './components/Firestore'
 import Survey from './components/Survey'
 import Operator from './components/Operator'
+import Qimg from './components/Qimg'
+import Mchoice from './components/Mchoice'
 
 Vue.use(Router)
 
@@ -19,7 +21,10 @@ const routes = [
       component: Krong,
       children:[
         { path: 'new', component: Content},
-        { path: 'start', component: Firestore}
+        { path: 'start', component: Firestore},
+        { path: 'qimg', component: Qimg},
+        { path: 'mchoice', component: Mchoice}
+
       ]
     }
   ]

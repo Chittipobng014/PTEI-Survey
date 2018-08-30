@@ -8,7 +8,9 @@ import Firestore from './components/Firestore'
 import Survey from './components/Survey'
 import Operator from './components/Operator'
 import Qimg from './components/Qimg'
-import Mchoice from './components/Mchoice'
+import SurveyLoader from './components/SurveyLoader'
+import QYesNo from './components/QYesNo'
+import Qtextinput from './components/Qtextinput'
 
 Vue.use(Router)
 
@@ -23,7 +25,9 @@ const routes = [
         { path: 'new', component: Content},
         { path: 'start', component: Firestore},
         { path: 'qimg', component: Qimg},
-        { path: 'mchoice', component: Mchoice}
+        { path: 'loader', component: SurveyLoader},
+        { path: 'qyesno', component: QYesNo},
+        { path: 'qtextinput', component: Qtextinput}
 
       ]
     }

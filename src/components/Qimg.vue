@@ -1,38 +1,38 @@
 <template>
 <div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
-     <h1>{{surveys[4].qid}}. {{surveys[4].qname}}</h1>
-     <div style="margin-top: 7vh; margin-left:8vw; "  >
-        
-        <div v-for="img in imgs"  v-bind:key="img.url">
-            <b-img v-bind:src="img.url"/>
+       <h1>{{surveys.qid}}. {{surveys.qname}}</h1>
+        <div class="row">
+            <div class="col-6" v-for="ans in surveys.ans" v-bind:key="ans.option"><b-img rounded :src="ans.url" class="img-body"></b-img></div>
         </div>
-     </div>
+
 </div>
 </template>
 <script>
-
-import {firestore} from '../firebase.js'
+import CheckBox from './Checkbox'
 
 export default {
-
+    props:['surveys'],
+    name: 'qimg',
     data (){
-      return{
-          imgs:[
-              {url:'https://image.flaticon.com/icons/png/512/1068/1068580.png',},
-              {url:'../photo/2.png'},
-              {url:'../photo/3.png'},
-              {url:'../photo/4.png'}
-          ]
-        }
-    },    
-    firestore (){
-        return {
-            surveys : firestore.collection('surveys')
-        }
+      return{                
+      }
     },
-    mounted() {
+    created() {
         console.log(this.surveys);        
+    },
+    components: {
+        CheckBox
     }
-
 }
 </script>
+
+<style>
+.img-body{
+    width:20vw; 
+    height:20vh;
+}
+.col-6{
+    margin-top:20px;
+    text-align: center;
+}
+</style>

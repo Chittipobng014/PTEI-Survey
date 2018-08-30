@@ -2,8 +2,8 @@
 <div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
     <h1>{{surveys.qid}}. {{surveys.qname}}</h1>
     <div class="row">
-        <div  class="col-6" v-for="ans in surveys.ans" v-bind:key="ans.option">
-            <div in surveys.ans v-bind:key="ans.option"><b-img rounded :src="ans.url" class="img-body"></b-img></div>
+        <div class="col-6" v-for="ans in surveys.ans" v-bind:key="ans.option">
+            <div in surveys.ans v-bind:key="ans.option"><b-img  rounded="circle" :src="ans.url" class="img-body"></b-img></div>
         </div>
     </div>
     <!-- <div v-if="surveys.ans[surveys.ans.length - 1].selected">
@@ -34,12 +34,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .img-body{
-    width:15vw; 
+    width:14vw; 
     height:15vh;
     box-shadow: 0 0 10px #000000;
     text-align: center;
+}
+.col-6{
+    text-align: center;
+}
+.row{
+    margin-top:8vh;
 }
 </style>
 

@@ -8,7 +8,6 @@
 </div>
 </template>
 <script>
-import CheckBox from './Checkbox'
 
 export default {
     props:['surveys'],
@@ -19,20 +18,20 @@ export default {
     },
     created() {
         console.log(this.surveys);        
-    },
-    components: {
-        CheckBox
     }
 }
 </script>
 
-<style>
+<style scoped>
 .img-body{
-    width:20vw; 
-    height:20vh;
+    width:17vw; 
+    height:18vh;
 }
 .col-6{
     margin-top:20px;
     text-align: center;
+}
+.row{
+    margin-top:8vh;
 }
 </style>

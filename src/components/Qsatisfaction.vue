@@ -3,20 +3,20 @@
        <h4>{{surveys.qid}}. {{surveys.qname}}</h4>
        <div class="h3"><h3>{{surveys.ans[0].ansname}}</h3></div>
        <hr>
-       <h4>{{ surveys.titleE }}</h4>
+       <h3>{{ surveys.titleBe }}</h3>
         <div class="row">
-            <div class="col" v-for="imgExpect in surveys.imgExpect" v-bind:key="imgExpect.optionE"><b-img rounded="circle" :src="imgExpect.urlE" class="img-body"></b-img></div>
+            <div class="col" v-for="img in surveys.img" v-bind:key="img.url"><b-img rounded="circle" :src="img.url" class="img-body"></b-img></div>
         </div>
         <div class="row">
-            <div class="col" v-for="imgExpect in surveys.imgExpect" v-bind:key="imgExpect.optionE"><p>{{imgExpect.optionE}}</p></div>
+            <div class="col" v-for="img in surveys.img" v-bind:key="img.option"><p>{{img.option}}</p></div>
         </div>
         <hr>
-        <h4>{{ surveys.titleS }}</h4>
+        <h3>{{ surveys.titleAf }}</h3>
         <div class="row">
-            <div class="col" v-for="imgSatis in surveys.imgSatis" v-bind:key="imgSatis.optionS"><b-img rounded="circle" :src="imgSatis.urlS" class="img-body"></b-img></div>
+            <div class="col" v-for="img in surveys.img" v-bind:key="img.url"><b-img rounded="circle" :src="img.url" class="img-body"></b-img></div>
         </div>
         <div class="row">
-            <div class="col" v-for="imgSatis in surveys.imgSatis" v-bind:key="imgSatis.optionS"><p>{{imgSatis.optionS}}</p></div>
+            <div class="col" v-for="img in surveys.img" v-bind:key="img.option"><p>{{img.option}}</p></div>
         </div>
 
 </div>
@@ -25,7 +25,7 @@
 
 export default {
     props:['surveys'],
-    name: 'qexpect',
+    name: 'qsatisfaction',
     data (){
       return{                
       }

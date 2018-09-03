@@ -6,11 +6,6 @@
             <div in surveys.ans v-bind:key="ans.option"><b-img  rounded="circle" :src="ans.url" class="img-body"></b-img></div>
         </div>
     </div>
-    <!-- <div v-if="surveys.ans[surveys.ans.length - 1].selected">
-        <b-col sm="10">
-            <b-form-input v-model="surveys.ans[surveys.ans.length - 1].input" id="input-large" size="lg" type="text" placeholder="Enter your answer"></b-form-input>
-        </b-col>
-    </div>     -->
 </div>
 </template>
 <script>

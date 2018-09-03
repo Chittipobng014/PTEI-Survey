@@ -13,6 +13,9 @@ import QYesNo from './components/QYesNo'
 import Qtextinput from './components/Qtextinput'
 import Qexpect from './components/Qexpect'
 import Qagreement from './components/Qagreement'
+import Qsatisfaction from './components/Qsatisfaction'
+import Qexpend from './components/Qexpend'
+import Qhours from './components/Qhours'
 
 Vue.use(Router)
 
@@ -31,7 +34,10 @@ const routes = [
         { path: 'qyesno', component: QYesNo},
         { path: 'qtextinput', component: Qtextinput},
         { path: 'qexpect', component: Qexpect},
-        { path: 'qagreement', component: Qagreement}
+        { path: 'qagreement', component: Qagreement},
+        { path: 'qsatisfaction', component: Qsatisfaction},
+        { path: 'qexpend', component: Qexpend},
+        { path: 'qhours', component: Qhours}
 
       ]
     }

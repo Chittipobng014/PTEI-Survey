@@ -11,7 +11,8 @@
         <b-col sm="10">
             <b-form-input v-model="surveys.ans[surveys.ans.length - 1].input" id="input-large" size="lg" type="text" placeholder="Enter your answer"></b-form-input>
         </b-col>
-    </div>  </div>  
+    </div>  
+    </div>  
 </div>
 </template>
 <script>

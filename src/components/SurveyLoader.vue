@@ -1,6 +1,13 @@
 <template>
     <div>
-        <Qhours v-bind:surveys="this.q16"> </Qhours> 
+    <Mchoice v-bind:surveys="this.q6"> </Mchoice>
+    <QYesNo v-bind:surveys="this.q2"> </QYesNo>
+    <Qimg v-bind:surveys="this.q7"> </Qimg>
+    <Qtextinput v-bind:surveys="this.q1"> </Qtextinput>
+    <Qexpect v-bind:surveys="this.q17"> </Qexpect>
+    <Qagreement v-bind:surveys="this.q19"> </Qagreement>
+    <Qsatisfaction v-bind:surveys="this.q18"> </Qsatisfaction>
+    <Qhours v-bind:surveys="this.q16"> </Qhours> 
     </div>
 </template>
 

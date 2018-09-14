@@ -1,7 +1,7 @@
 <template>
     <div class="container" style="margin: auto; margin-top: 28vh">
         <div>
-            <router-link to="/start">
+            <router-link to="/loader">
                 <b-button class="buttonCSS">Start new questionare</b-button>
             </router-link>            
         </div>

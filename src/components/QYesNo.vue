@@ -1,5 +1,5 @@
 <template>
-<div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
+<div style="margin: 2vh 7vh 3vh; min-height: 65vh; max-height: 65vh;">
     <h1>{{surveys.qid}}. {{surveys.qname}}</h1>
     <div class="row">
         <div class="col-6" v-for="ans in surveys.ans" v-bind:key="ans.option">
@@ -23,8 +23,7 @@ export default {
             console.log(ans)
         }
     },
-    created() {
-        console.log(this.surveys);        
+    created() {    
     }
 }
 </script>

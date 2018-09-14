@@ -1,9 +1,9 @@
 <template>
-<div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
-    <h1>{{surveys.qid}}. {{surveys.qname}}</h1>
+<div style="margin: 1% 0% 3% 5%;        min-height: 65vh;       max-height: 65vh;">
+    <h1>{{surveys.qid}}. {{surveys.qname}} </h1>
     <div class="line">
     <div v-for="ans in surveys.ans" v-bind:key="ans.option">
-        <b-form-checkbox v-model="ans.selected" :options="options">
+        <b-form-checkbox v-model="ans.selected" >
                 <h2>{{ans.option}}</h2>
         </b-form-checkbox>        
     </div>
@@ -14,9 +14,9 @@
     </div>  
     </div>  
 </div>
+
 </template>
 <script>
-import CheckBox from './Checkbox'
 
 export default {
     props:['surveys'],
@@ -25,18 +25,16 @@ export default {
       return{                
       }
     },
-    created() {
-        console.log(this.surveys);        
+    created() {        
     },
     components: {
-        CheckBox
     }
 }
 </script>
 
 <style scoped>
 .line{
-    margin-top:8vh;
+    margin: 3% 0% 0% 5%;
 }
 </style>
 

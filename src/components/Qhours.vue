@@ -3,7 +3,7 @@
     <h2>{{surveys.qid}}. {{surveys.qname}}</h2>
     <hr>
     <b-col v-for="ans in surveys.ans.slice(0, 3)" v-bind:key="ans.ansname">
-        <b-form-checkbox v-model="ans.selected" :options="options">
+        <b-form-checkbox v-model="ans.selected" >
                 <h3>{{ans.ansname}}</h3>
         </b-form-checkbox> 
         <div v-if="ans.selected">
@@ -16,7 +16,6 @@
 </div>
 </template>
 <script>
-import CheckBox from './Checkbox'
 export default {
     props:['surveys'],
     name: 'qhours',
@@ -24,11 +23,10 @@ export default {
       return{                
       }
     },
-    created() {
-        console.log(this.surveys);        
+    created() {      
     },
     components: {
-        CheckBox
+
     }
 }
 </script>

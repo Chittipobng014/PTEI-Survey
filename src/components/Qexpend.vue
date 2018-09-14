@@ -1,5 +1,5 @@
 <template>
-<div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
+<div style="margin: auto; margin-left:7vh; margin-right:7vh;">
     <h2>{{surveys.qid}}. {{surveys.qname}}</h2>
        <!-- <div class="h3"><h3>{{surveys.ans[0].ansname}}</h3></div> -->
     <hr>
@@ -21,8 +21,7 @@ export default {
       return{                
       }
     },
-    created() {
-        console.log(this.surveys);        
+    created() {      
     }
 }
 </script>

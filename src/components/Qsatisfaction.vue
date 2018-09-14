@@ -30,8 +30,7 @@ export default {
       return{                
       }
     },
-    created() {
-        console.log(this.surveys);        
+    created() {   
     }
 }
 </script>

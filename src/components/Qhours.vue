@@ -1,10 +1,11 @@
 <template>
-<div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
-    <h2>{{surveys.qid}}. {{surveys.qname}}</h2>
+<div style="margin: 1% 1% 2% 3%; min-height: 5vh;  max-height: 60vh;">
+    <h3>{{surveys.qid}}. {{surveys.qname}}</h3>
     <hr>
-    <b-col v-for="ans in surveys.ans.slice(0, 3)" v-bind:key="ans.ansname">
+    <div class="row">
+    <b-col class="col-6" v-for="ans in surveys.ans.slice(0, 6)" v-bind:key="ans.ansname">
         <b-form-checkbox v-model="ans.selected" >
-                <h3>{{ans.ansname}}</h3>
+                <h4>{{ans.ansname}}</h4>
         </b-form-checkbox> 
         <div v-if="ans.selected">
         <b-col>
@@ -12,7 +13,7 @@
         </b-col>
     </div>          
     </b-col>
-     
+     </div>
 </div>
 </template>
 <script>

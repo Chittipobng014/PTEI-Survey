@@ -1,9 +1,9 @@
 <template>
-<div style="margin: auto; margin-left:7vh; margin-right:7vh; margin-top: 8vh">
-       <h4>{{surveys.qid}}. {{surveys.qname}}</h4>
+<div style="margin: 1% 1% 1% 1%; min-height: 5vh;  max-height:65vh;">
+       <h5>{{surveys.qid}}. {{surveys.qname}}</h5>
        <div class="h3"><h3>{{surveys.ans[0].ansname}}</h3></div>
        <hr>
-       <h3>{{ surveys.titleBe }}</h3>
+       <h5>{{ surveys.titleBe }}</h5>
         <div class="row">
             <div class="col" v-for="img in surveys.img" v-bind:key="img.url"><b-img rounded="circle" :src="img.url" class="img-body"></b-img></div>
         </div>
@@ -11,7 +11,7 @@
             <div class="col" v-for="img in surveys.img" v-bind:key="img.option"><p>{{img.option}}</p></div>
         </div>
         <hr>
-        <h3>{{ surveys.titleAf }}</h3>
+        <h5>{{ surveys.titleAf }}</h5>
         <div class="row">
             <div class="col" v-for="img in surveys.img" v-bind:key="img.url"><b-img rounded="circle" :src="img.url" class="img-body"></b-img></div>
         </div>
@@ -42,12 +42,8 @@ export default {
     box-shadow: 0 0 10px #000000;
 }
 .col{
-    margin-top:12px;
+    margin-top:5px;
     text-align: center;
-    
-}
-.row{
-    margin-top:1vh;
     
 }
 .h3{

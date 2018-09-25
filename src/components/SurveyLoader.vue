@@ -5,8 +5,8 @@
             <!-- Check the question type and load corresponding component -->            
                 <tab-content title="" v-for="question in questions" :key="question.qid">
                     <!-- v-if="question.type == ???" -->
-                    <mchoice v-if="question.type == 'mchoice'" :surveys="question"></mchoice>
-                    <q-yes-no v-if="question.type == 'q-yes-no'" :surveys="question"></q-yes-no>
+                    <mchoice v-if="question.type == 'mchoice'" :surveys="question" user="response1"></mchoice>
+                    <q-yes-no v-if="question.type == 'q-yes-no'" :surveys="question" user="response1"></q-yes-no>
                     <qimg v-if="question.type == 'qimg'" :surveys="question"></qimg>
                     <qtextinput v-if="question.type == 'qtextinput'" :surveys="question"></qtextinput>                                            
                     <qexpect v-if="question.type == 'qexpect'" :surveys="question"></qexpect>
@@ -54,14 +54,20 @@ export default {
   data() {
     return {
       questions: [],
-      true: true
+      true: true,
+      answers: [],
+      
     };
-  },
+  }, 
   firestore() {
     return {
       // Get all questions and render all at once
-      surveys: firestore.collection("surveys").orderBy("qid")
+      surveys: firestore.collection("surveys").orderBy("qid"),
+      user: firestore.collection("answers")
     };
+  },
+  methods:{
+    
   },
   async mounted() {    
     this.questions = await this.surveys;

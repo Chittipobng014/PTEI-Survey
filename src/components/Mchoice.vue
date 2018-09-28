@@ -3,7 +3,7 @@
     <h2>{{surveys.qid}}. {{surveys.qname}} </h2>
     <div class="row">
     <div class="col-6" v-for="ans in surveys.ans" v-bind:key="ans.option">
-        <b-form-checkbox v-model="ans.selected" @change="getselected(ans.option,ans.selected)">
+        <b-form-checkbox v-model="ans.selected" @change="getselected(ans.option,!ans.selected)">
                 <h4>{{ans.option}}</h4>
         </b-form-checkbox>        
     </div>
@@ -22,29 +22,24 @@ export default {
   name: "mchoice",
   data() {
     return {
-      mchoice: [],
+      answers: []
     };
   },
   created() {},
   methods: {
-    getselected: function(value, boolean) {
-        var data = [value, boolean];
-        this.mchoice.push(data);
-        for (var i = 0; i < this.mchoice.length; i++) {
-          if (this.mchoice[i][1] === true ) {
-            this.mchoice.splice(this.mchoice.indexOf(this.mchoice[i][0]), 1);
-      }}// incorrect logic
-      console.log(this.mchoice);
-      console.log(this.mchoice.length)
+    getselected: function(option, selected) {
+      var answer = {option, selected};
+      var index = this.surveys.ans.map(function(e) { return e.option; }).indexOf(option) // find index
+      this.surveys.ans[index] = answer; // edit selected
+      console.log(this.surveys.ans[index])
     }
-  },
-  components: {}
+  }
 };
 </script>
 
 <style scoped>
 .row {
-  margin: 1% 0% 0% 5%;                                                       
+  margin: 1% 0% 0% 5%;
 }
 </style>
 
